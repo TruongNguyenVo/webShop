@@ -88,6 +88,9 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+#navbar #close{
+  display: none;
+}
 #navbar li{
   list-style: none;
   padding: 0 20px; /*cách các cột ra*/
@@ -97,7 +100,7 @@ body {
   text-decoration: none;
   font-size: 17px;
   font-weight: 150; /* độ đậm của chữ*/
-  color: #black; /*màu khi click vào chữ*/
+  color: #000000; /*màu khi click vào chữ*/
   transition: 0.3s ease;
 }
 #navbar li a:hover,  /*chuyển màu khi rê chuột vào chữ*/
@@ -114,6 +117,11 @@ body {
   bottom: -4px;
   left: 20px;
 }
+#mobile{
+  display: none; /*ẩn mục */
+  align-items: center;
+}
+
 
 /*home page*/
 #hero{
@@ -220,10 +228,13 @@ body {
   border:1px solid #cce7d0;
   border-radius: 25px;
   cursor: pointer;
+
 /*  margin: 15px 10px;*/
+
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 5px;
+
 /*  margin-right: 10px;*/
 /*  position: relative;*/
 }
@@ -579,6 +590,135 @@ footer .col .installApp{
   padding-top: 35px;
 }
 
+/*reponsive */
+/*Start Media Query*/
+
+@media (max-width: 799px){
+.section-p1 {
+    padding: 40px 40px;
+}
+
+/*phần navbar*/
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0px;
+/*    right: 0px;*/
+    right: -300px; /*ẩn mục navbar vào trong (bằng mục width)*/
+    height: 100vh;
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+    padding:80px 0 0 10px;  
+  }
+  #navbar #close{
+    display: flex;
+  }
+  #navbar.active{
+    right: 0px;
+  }
+  #navbar li{
+    margin-bottom: 25px; /*khoảng cách giữa các mục*/
+  }
+  #mobile{
+  display: flex; /*ẩn mục */
+  align-items: center;
+  }
+  #mobile a{
+    margin-left: 10px;
+  }
+  #mobile #cartMobile{
+  }
+  #close{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 20px;
+  }
+  #close.active{
+    right: -300px;
+  }
+  #lg-bag{
+    display: none; /*ẩn mục giỏ hàng*/ 
+  }
+
+
+/*phần hero*/
+  #hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%;
+  }
+
+/*phần feature*/
+  #feature {
+    justify-content: center;
+}
+  #feature .fe-box {
+    margin: 15px 15px;
+}
+
+/*phần product*/
+  #product1 .pro-container {
+      justify-content: center;
+      margin: 0px 100px;
+  }
+  #product1 .pro {
+    margin: 20px;
+}
+  #product1 .pro #cart{
+  margin-left: 135px;
+}
+
+/*phần banner*/
+  #banner {
+      height: 20vh;
+  }
+  #banner h4 {
+    margin-top: 60px;
+}
+  #banner h2 {
+    padding: 10px 0;
+}
+  #banner button {
+    margin-bottom: 30px;
+}
+
+/*phần banner-box*/
+  #sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+    margin-bottom: 50px;
+}
+  #sm-banner .banner-box_1 {
+    min-width: 100%;
+    height: 30vh;
+}
+
+/*phần banner-text*/
+  #sm-banner-text .banner-text {
+    min-width: 20%;
+    height: 30vh;
+    width: 30vh;
+}
+  #sm-banner-text .banner-text-2 {
+    min-width: 30%;
+    height: 30vh;
+    width: 30vh;
+    margin-top: -758px;
+    margin-left: 350px;
+}
+/*phần form*/
+  #newsletter .form {
+    width: 65%;
+}
+
+} 
+}
 
 
 
